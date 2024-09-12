@@ -50,4 +50,4 @@ if st.button('Predict Loan'):
     })
     input_data=input_data.astype({'Fam members':"category",'Education':"category",'Fixed Deposit':"category",'Demat':"category",'Net Banking':"category"})
     prediction = model.predict(input_data)
-    st.write(f'Loan Prediction: {"Acceptance" if prediction[0] == 1 else "Not Acceptance"}')
+    st.write(f'Loan Prediction: {"Will Accept" if prediction[0] == 1 else "Will Not Accept"}')
